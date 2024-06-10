@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #moviePoster {
+            max-width: 100%; /* Image responsive */
+            height: auto;   /* Conserve l'aspect ratio */
+        }
+        .card-custom {
+            max-width: 600px; /* Limite la largeur de la carte */
+            margin: auto;     /* Centre la carte */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Movie details</h1>
+        <form id="movieForm" class="mb-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="movieTitle" placeholder="Enter movie title">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Chercher</button>
+        </form>
+        <div id="movieDetails" class="card card-custom" style="display: none;">
+            <img id="moviePoster" class="card-img-top" alt="Movie Poster" style="display: none;">
+            <div class="card-body">
+                <h5 id="movieTitleDisplay" class="card-title"></h5>
+                <h6 id="movieYear" class="card-subtitle mb-2 text-muted"></h6>
+                <p id="moviePlot" class="card-text"></p>
+                <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+                <p><strong>Acteurs:</strong> <span id="movieActors"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
